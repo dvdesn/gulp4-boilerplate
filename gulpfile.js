@@ -7,6 +7,7 @@ const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
+const browserSync = require('browser-sync').create();
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 var replace = require('gulp-replace');
@@ -15,7 +16,9 @@ var replace = require('gulp-replace');
 // File paths
 const files = { 
     scssPath: 'app/scss/**/*.scss',
-    jsPath: 'app/js/**/*.js'
+    jsPath: 'app/js/**/*.js',
+    cssPath: 'dist/**/*.css',
+    markupPath: './**/*.html'
 }
 
 // Sass task: compiles the style.scss file into style.css
@@ -61,11 +64,42 @@ function watchTask(){
     );    
 }
 
+//Custom Davide to add Browser sync
+
+function watchBS() {
+    browserSync.init(
+        {
+        // proxy: "localhost:8888/",
+        //notify: false,
+        server: {
+          baseDir: "./"
+        }     
+    });
+
+    watch([files.scssPath, files.jsPath],
+        {interval: 1000, usePolling: true}, //Makes docker work
+        series(
+            parallel(scssTask, jsTask),
+            cacheBustTask
+        )
+    );
+
+    watch([files.cssPath, files.markupPath]).on('change', browserSync.reload);
+
+
+}
+
 // Export the default Gulp task so it can be run
 // Runs the scss and js tasks simultaneously
 // then runs cacheBust, then watch task
+// exports.default = series(
+//     parallel(scssTask, jsTask), 
+//     cacheBustTask,
+//     watchTask
+// );
+
 exports.default = series(
     parallel(scssTask, jsTask), 
     cacheBustTask,
-    watchTask
+    watchBS
 );
