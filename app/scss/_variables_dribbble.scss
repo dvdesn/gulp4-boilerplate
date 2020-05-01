@@ -1,0 +1,39 @@
+// Colors
+$light: #f2f2f2;
+$magento: #3153cb;
+$blue: #0d1851;
+$blue-dk: darken($blue, 7%);
+$pink: #ff397f;
+$green: #21f8b6;
+$yellow: #FFDC85;
+$orange: #FFAA58;
+
+// Spacing
+$stage-width: 240;
+$space-to-stage: 16;
+
+$space: 1rem;
+$space:  100vmin * ($space-to-stage / $stage-width);
+
+$s-l1: $space * .0625; //1
+$s-l2: $space * .125; //2
+
+$s-01: $space * .25; //4
+$s-02: $space * .375; //6
+$s-03: $space * .5; //8
+$s-04: $space * .75; //12
+
+$s-10: $space;
+
+$s-20: $space * 1.5; // 24
+$s-30: $space * 2; // 32
+$s-40: $space * 3; // 48
+$s-50: $space * 3.5; // 56
+$s-60: $space * 4; // 64
+$s-70: $space * 4.5; // 72
+$s-90: $space * 6; //96
+
+
+$size-head: $s-40;
+
+$s-sprite-w: 96px;
