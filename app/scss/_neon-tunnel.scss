@@ -4,8 +4,8 @@
 .neon-tunnel {
   display: block;
   position: absolute;
-  width: $s-10 * 5.5;
-  height: $s-10 * 3.5;
+  width: $tunnel-back-width;
+  height: $tunnel-back-height;
 
   &::before,
   &::after {
@@ -37,12 +37,14 @@
   }
 }
 
+.hallway-shadow,
 .neon-tunnel__hallway,
 .neon-tunnel__hallway::before,
 .neon-tunnel__hallway::after,
-.neon-tunnel__back,
-.neon-tunnel__back::before,
-.neon-tunnel__back::after  {
+.neon-tunnel__hallway > span,
+.neon-tunnel__hallway > span::before,
+.neon-tunnel__hallway > span::after,
+.neon-tunnel__back  {
   display: block;
   position: absolute;
   width: 100%;
@@ -55,8 +57,8 @@
 
 .neon-tunnel__hallway::before,
 .neon-tunnel__hallway::after,
-.neon-tunnel__back::before, 
-.neon-tunnel__back::after {
+.neon-tunnel__hallway > span::before, 
+.neon-tunnel__hallway > span::after {
     content: "";
     //   background: rgba($pink, .5);
       animation: zoom-z $tunnel-speed linear infinite;  
@@ -66,22 +68,26 @@
     animation-delay: -$tunnel-speed*1.75;
 }
 
+.neon-tunnel__hallway::after {
+    animation-delay: -$tunnel-speed*1.50;
+}
+
+
+.neon-tunnel__hallway > span::before {
+    animation-delay: -$tunnel-speed*1.25;
+}
+
+.neon-tunnel__hallway > span::after {
+    //animation-delay: -$tunnel-speed*1.25;
+}
+
 
 .neon-tunnel__back {
     background: darken($blue, 5%);
     box-shadow: 0 0 $s-10 $s-10 rgba(darken($blue, 2%), 0.8);
     z-index: 2;
     animation: light-pulse $tunnel-speed/4 ease-in-out infinite ($tunnel-speed/4)*.75;
-
-    &::before {
-        animation-delay: -$tunnel-speed*1.50;
-    }
-
-    &::after {
-        animation-delay: -$tunnel-speed*1.25;
-    }
 }
-
 
 @keyframes zoom-z {
     0% {
@@ -239,4 +245,223 @@
       rgba($blue-dk, 0.8) 100%
     );
   }
+}
+
+
+// Alternative staff that did not make it
+//---- ---- ---- ---- ---- ----  
+.hallway-shadow {
+    color: red;
+    top: - $tunnel-back-height;
+   
+    //box-shadow: 
+        // 0 $tunnel-back-height  0 0 $blue ,
+        // 0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+
+        // 0 $tunnel-back-height  0 25vmin $blue ,
+        // 0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
+
+        // 0 $tunnel-back-height  0 50vmin $blue ,
+        // 0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
+
+        // 0 $tunnel-back-height  0 75vmin $blue ,
+        // 0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+
+        // 0 $tunnel-back-height  0 100vmin $blue ,
+        // 0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0.25)
+
+    //;
+    animation: hallway-shadow 4s linear infinite;
+}
+
+@keyframes hallway-shadow {
+    0%, 100% {
+        box-shadow: 
+            0 $tunnel-back-height  0 0 $blue,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 75vmin $blue ,
+            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 100vmin $blue ,
+            0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0.25)
+        ;
+    }
+
+    19.9% {
+        box-shadow: 
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+    
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+    
+            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
+            
+            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
+    
+            0 $tunnel-back-height  0 75vmin $blue ,
+            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25)
+        ;
+    }
+
+    20% {
+        box-shadow: 
+            0 $tunnel-back-height  0 100vmin transparent ,
+            0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0),
+
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
+            
+            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 75vmin $blue ,
+            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25)
+        ;
+    }
+
+    39.9% {
+        box-shadow: 
+            0 $tunnel-back-height  0 75vmin $blue,
+            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+    
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+    
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+    
+            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
+            
+            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25)
+        ;
+      }
+
+    40% {
+        box-shadow: 
+            0 $tunnel-back-height  0 75vmin $blue ,
+            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 100vmin $blue ,
+            0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
+            
+            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25)
+        ;
+    }
+    
+    59.9% {
+        box-shadow: 
+            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25), 
+            
+            0 $tunnel-back-height  0 75vmin $blue ,
+            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+    
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+    
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+    
+            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25)
+        ;    
+    }
+
+    60% {
+        box-shadow: 
+            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25), 
+            
+            0 $tunnel-back-height  0 75vmin $blue ,
+            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 100vmin $blue ,
+            0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25)
+        ;
+    }
+
+    79.9% {
+        box-shadow: 
+            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
+            
+            0 $tunnel-back-height  0 75vmin $blue ,
+            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25)
+        ;
+    }
+    
+    80% {
+        box-shadow: 
+            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
+            
+            0 $tunnel-back-height  0 75vmin $blue ,
+            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 100vmin $blue ,
+            0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25)
+        ;
+    }
+
+    99.9% {
+        box-shadow: 
+            0 $tunnel-back-height  0 0 $blue,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 75vmin $blue ,
+            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+
+            0 $tunnel-back-height  0 0 $blue ,
+            0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25)
+        ;
+    }
 }
