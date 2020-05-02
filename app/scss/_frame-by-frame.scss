@@ -10,7 +10,7 @@
   margin: 72px 72px 0;
   width: 96px;
   height: 120px;
-  background-image: url("https://drive.google.com/uc?id=1KBKDE9Ugq3zeSYaZOmo32sU5KcTnLhZ8");
+  background-image: url("https://drive.google.com/uc?id=15imFflnOKROoDw14C7_A1XETH1Karich");
   background-size: 864px 120px;
   background-position: (96px * 4) 0;
   //imation: walk 1s steps(8) infinite reverse;
@@ -41,9 +41,7 @@
   }
 }
 
-.sprite-2 {
-  background-image: url("https://drive.google.com/uc?id=15imFflnOKROoDw14C7_A1XETH1Karich");
-}
+
 
 
 .kid-1 {
@@ -55,6 +53,7 @@
   .leg-up {
     transform: translate($s-03, $s-01) rotate(-30deg);
   }
+  
   .leg-down  {
     transform: translate($s-03, $s-01) rotate(-8deg);
     height: $s-10 * 2;

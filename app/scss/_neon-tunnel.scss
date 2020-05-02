@@ -1,0 +1,242 @@
+// Background
+//---- ---- ---- ---- ----
+
+.neon-tunnel {
+  display: block;
+  position: absolute;
+  width: $s-10 * 5.5;
+  height: $s-10 * 3.5;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: $s-l2 solid lighten($pink, 25%);
+    // border-right-color: #f5a3c0;
+    // border-left-color: #f5a3c0;
+  }
+
+  &::before {
+    bottom: 100%;
+    transform-origin: bottom center;
+    transform: rotateX(-90deg);
+    border-width: $s-l1;
+    border-color: rgba($magento, 0.5);
+    box-shadow: 0 0 $s-l2 rgba($magento, 0.5);
+  }
+
+  &::after {
+    top: 100%;
+    z-index: 1;
+    transform-origin: top center;
+    transform: rotateX(90deg);
+    box-shadow: 0 0 $s-l2 rgba($pink, 1);
+    
+  }
+}
+
+.neon-tunnel__hallway,
+.neon-tunnel__hallway::before,
+.neon-tunnel__hallway::after,
+.neon-tunnel__back,
+.neon-tunnel__back::before,
+.neon-tunnel__back::after  {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 0 $s-l1 rgba($magento, 0.25);
+  
+}
+
+.neon-tunnel__hallway::before,
+.neon-tunnel__hallway::after,
+.neon-tunnel__back::before, 
+.neon-tunnel__back::after {
+    content: "";
+    //   background: rgba($pink, .5);
+      animation: zoom-z $tunnel-speed linear infinite;  
+}
+
+.neon-tunnel__hallway::before {
+    animation-delay: -$tunnel-speed*1.75;
+}
+
+
+.neon-tunnel__back {
+    background: darken($blue, 5%);
+    box-shadow: 0 0 $s-10 $s-10 rgba(darken($blue, 2%), 0.8);
+    z-index: 2;
+    animation: light-pulse $tunnel-speed/4 ease-in-out infinite ($tunnel-speed/4)*.75;
+
+    &::before {
+        animation-delay: -$tunnel-speed*1.50;
+    }
+
+    &::after {
+        animation-delay: -$tunnel-speed*1.25;
+    }
+}
+
+
+@keyframes zoom-z {
+    0% {
+      transform: translateZ(24vmin);
+      opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateZ(0);
+        opacity: 0;
+    }
+  }
+
+
+
+.square-tunnel.square-tunnel-frame {
+  animation: none;
+  background: darken($blue, 5%);
+  z-index: 2;
+}
+
+.square-tunnel {
+  width: 88px;
+  width: $s-10 * 5.5;
+  height: $s-10 * 3.5;
+  display: block;
+  position: absolute;
+  //background: $blue;
+
+  box-shadow: 0 0 0 1px rgba($magento, 0.25);
+  transform-origin: center;
+  animation: tunnel-square 3.2s linear infinite;
+}
+.square-tunnel:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.square-tunnel:nth-child(4) {
+  animation-delay: 1.6s;
+}
+
+@keyframes tunnel-square {
+  0% {
+    opacity: 1;
+    transform: scale(4);
+    box-shadow: 0 0 0 $s-l1 rgba($magento, 0.25), 0 0 $s-01 rgba($magento, 1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+}
+
+.fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: darken($blue, 5%);
+  z-index: 2;
+  //box-shadow: 0 0 $s-01 0 rgba($magento, .5);
+
+  &.w-perspective {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 300%;
+      border: $s-l2 solid transparent;
+      border-right-color: #f5a3c0;
+      border-left-color: #f5a3c0;
+    }
+    &::before {
+      //background: rgba(red, .1);
+      bottom: calc(100% - #{$s-l1});
+      transform-origin: bottom center;
+      transform: rotateX(-94deg);
+      border-width: $s-l1;
+      border-color: rgba($magento, 0.5);
+      box-shadow: inset 0 0 $s-l2 rgba($magento, 0.5);
+      //-webkit-mask: linear-gradient(to top, rgba(0,0,0,.2) 0%, #000 20%);
+    }
+    &::after {
+      //background: rgba(red, .1);
+      top: calc(100% - #{$s-l1});
+      z-index: 1;
+      width: calc(100% - #{$s-l2});
+
+      //border-image: linear-gradient(to bottom, $blue 0%, an($pink, 15%) 10%);
+      //border-image-slice: 1;
+
+      transform-origin: top center;
+      transform: rotateX(80deg);
+      //border-color: transparent;
+      //box-shadow: -1px 0 $s-01 0 #FF397F,
+      // 0 0 $s-01  $pink;
+      box-shadow: 0 0 $s-l1 rgba($pink, 1),
+        inset (-$s-l2) 0 $s-l1 (-$s-l1) rgba($pink, 0.25),
+        inset $s-l2 0 $s-l1 (-$s-l1) rgba($pink, 0.25),
+        inset 0 $s-02 $s-02 $s-02 rgba($pink, 0.06);
+      // -webkit-mask: linear-gradient(to bottom, rgba(0,0,0, 0) 0%, rgba(0,0,0,1) 5%);
+      //inset 0 0 $s-02 -$s-01 #FF397F;
+    }
+  }
+
+  &.fill-stack {
+    animation: light-pulse 1s ease-in-out infinite;
+    box-shadow: 0 0 $s-l1 0 rgba($magento, 0.25),
+      0 0 $s-10 $s-10 rgba(darken($blue, 2%), 0.8);
+  }
+}
+
+@keyframes light-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 $s-l1 0 rgba($magento, 0.25),
+      0 0 $s-10 $s-10 rgba(darken($blue, 2%), 0.8);
+  }
+
+  33% {
+    box-shadow: 0 0 $s-02 0 rgba($magento, 0.5),
+      0 0 $s-10 $s-10 rgba(darken($blue, 2%), 0.8);
+  }
+}
+
+.kid {
+  z-index: 3;
+}
+
+.stage-fader {
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(13, 24, 81, 0) 0%,
+      rgba($blue-dk, 0.5) 80%,
+      rgba($blue-dk, 0.8) 100%
+    );
+  }
+}
