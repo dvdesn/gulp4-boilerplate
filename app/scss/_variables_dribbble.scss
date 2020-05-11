@@ -12,7 +12,9 @@ $orange: #FFAA58;
 $stage-width: 240;
 $space-to-stage: 16;
 
-$space: 1rem;
+// $space: 1rem;
+// $space-unit: rem;
+$space-unit: vmin;
 $space:  100vmin * ($space-to-stage / $stage-width);
 
 $s-l1: $space * .0625; //1

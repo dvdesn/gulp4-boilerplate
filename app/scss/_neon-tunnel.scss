@@ -280,17 +280,17 @@
             0 $tunnel-back-height  0 0 $blue,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 75vmin $blue ,
-            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 75#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 100vmin $blue ,
-            0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0.25)
+            0 $tunnel-back-height  0 100#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (100#{$space-unit} + $s-l1) rgba($magento, 0.25)
         ;
     }
 
@@ -302,40 +302,40 @@
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
     
-            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
             
-            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
     
-            0 $tunnel-back-height  0 75vmin $blue ,
-            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25)
+            0 $tunnel-back-height  0 75#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25)
         ;
     }
 
     20% {
         box-shadow: 
-            0 $tunnel-back-height  0 100vmin transparent ,
-            0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0),
+            0 $tunnel-back-height  0 100#{$space-unit} transparent ,
+            0 $tunnel-back-height  0 (100#{$space-unit} + $s-l1) rgba($magento, 0),
 
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
             
-            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 75vmin $blue ,
-            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25)
+            0 $tunnel-back-height  0 75#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25)
         ;
     }
 
     39.9% {
         box-shadow: 
-            0 $tunnel-back-height  0 75vmin $blue,
-            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 75#{$space-unit} $blue,
+            0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
     
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
@@ -343,40 +343,40 @@
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
     
-            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
             
-            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25)
         ;
       }
 
     40% {
         box-shadow: 
-            0 $tunnel-back-height  0 75vmin $blue ,
-            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 75#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 100vmin $blue ,
-            0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 100#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (100#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
             
-            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25)
         ;
     }
     
     59.9% {
         box-shadow: 
-            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25), 
             
-            0 $tunnel-back-height  0 75vmin $blue ,
-            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 75#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
     
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
@@ -384,40 +384,40 @@
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
     
-            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25)
         ;    
     }
 
     60% {
         box-shadow: 
-            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25), 
             
-            0 $tunnel-back-height  0 75vmin $blue ,
-            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 75#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 100vmin $blue ,
-            0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 100#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (100#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25)
         ;
     }
 
     79.9% {
         box-shadow: 
-            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
             
-            0 $tunnel-back-height  0 75vmin $blue ,
-            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 75#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
@@ -429,17 +429,17 @@
     
     80% {
         box-shadow: 
-            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
             
-            0 $tunnel-back-height  0 75vmin $blue ,
-            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 75#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 100vmin $blue ,
-            0 $tunnel-back-height  0 (100vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 100#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (100#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25)
@@ -451,14 +451,14 @@
             0 $tunnel-back-height  0 0 $blue,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 25vmin $blue ,
+            0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 50vmin $blue ,
+            0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
 
-            0 $tunnel-back-height  0 75vmin $blue ,
-            0 $tunnel-back-height  0 (75vmin + $s-l1) rgba($magento, 0.25),
+            0 $tunnel-back-height  0 75#{$space-unit} $blue ,
+            0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25)
