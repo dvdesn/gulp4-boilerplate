@@ -1,13 +1,13 @@
-@import "variables";
 @import "variables_dribbble";
-@import "colors";
-@import "global";
-@import "typography";
 
-
+// @import "frame-by-frame";
+@import "kid";
 @import "neon-tunnel";
-@import "frame-by-frame";
 @import "animations";
+
+
+// Utilities
+// ---- ---- ---- ---- ---- ----
 
 .no-animation {
   *,
@@ -21,40 +21,45 @@
   display: none;
 }
 
-body {
-  background: orange;
 
+// Base
+// ---- ---- ---- ---- ---- ----
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
-  background: #444;
-  overflow: hidden;
-  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-
-  //background:linear-gradient(to bottom, #19b6ff 50%, #222 50%, #222 calc(50% + 0.25rem), blue calc(50% + 0.25rem));
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 // Stage
 // ---- ---- ---- ---- ---- ----
 
 .stage {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   perspective: 24vmin;
   overflow: hidden;
-  position: relative;
   width: 100vw;
   height: 100vh;
-  // max-width: $s-10 * 15;
   max-height: $s-10 * 15;
   margin: 0 auto;
   background: $blue;
-  position: relative;
 }
 
 .stage-1 {
@@ -68,217 +73,61 @@ body {
 }
 
 
-
-// Kid
-// ---- ---- ---- ---- ---- ----
-
-.kid {
-  position: relative;
-  //top: 72px;
-}
-
-.kid__head {
-  width: $s-10 * 3;
-  height: $s-10 * 3;
-  background: $pink;
-  border-radius: 100%;
-  position: relative;
-  z-index: 10;
-  animation: head 1s infinite;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    display: block;
-    width: $s-03;
-    height: $s-03;
-    border-radius: 100%;
-    background: $green;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &::before {
-    left: -$s-03;
-    animation: hip-right 1s infinite;
-  }
-
-  &::after {
-    right: -$s-03;
-    animation: hip-left 1s infinite;
-  }
-}
-
-.kid__leg {
-  position: absolute;
-  //width: 1px;
-  width: calc(50% + #{$s-01});
-  left: -$s-01;
-  overflow: hidden;
-  top: $size-head * 0.5;
-  min-height: $s-10 * 4.5;
-  //background: rgba(white, 0.2);
-  animation: leg-l 1s infinite;
-}
-
-.kid__leg.kid__leg--r {
-  right: -$s-01;
-  transform: scaleX(-1);
-  //huyi8background: rgba(white, 0.5);
-  left: auto;
-  position: absolute;
-  animation-name: leg-inverse;
-
-  .leg-inner > .joint {
-    animation-name: leg-joint-inverse;
-  }
-
-  //   .leg-inner::before,
-  .leg-up {
-    animation-name: leg-up-inverse;
-  }
-
-  //   .leg-inner::after,
-  .leg-down {
-    animation-name: leg-down-inverse;
-  }
-
-  .kid__foot {
-    animation-name: foot-inverse;
-  }
-
-  .leg-inner > .joint,
-  .leg-inner::before,
-  .leg-inner::after,
-  .foot {
-    //animation-direction: reverse;
-  }
-}
-
-.leg-inner {
-  position: absolute;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.joint {
-  width: $s-01;
-  height: $s-01;
-  background: $magento;
-  //background:$yellow;
-  display: block;
-  margin-left: -($s-01 * 0.375);
-  //background: $magento;
-  border-radius: 100%;
-  position: absolute;
-  top: 50%;
-  margin-top: -$s-01 * 0.5;
-  //left: 50%;
-  //transform: translate(10px, 5px);
-  animation: leg-joint 1s infinite;
-  //   &::before,
-  //   &::after
-}
-
-.leg-up,
-.leg-down {
-  content: "";
-  width: $s-l1;
-  height: $s-10 * 5;
-  position: absolute;
-  background: $magento;
-}
-
-//   &::before,
-.leg-up {
-  transform-origin: bottom center;
-  bottom: 50%;
-  //background: red;
-  animation: leg-up 1s infinite;
-  //transform: rotate(45deg);
-}
-
-//   &::after
-.leg-down {
-  transform-origin: top center;
-  top: 50%;
-  animation: leg-down 1s infinite;
-  //background: $orange;
-  //transform: rotate(45deg);
-}
-
-.kid__foot {
-  width: $s-10 * 1.5;
-  height: $s-10 * 0.75;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: $green;
-  transform-origin: right bottom;
-  border-radius: $s-04 $s-04 0 0;
-  animation: foot 1s infinite;
-}
-
 // Dribbble logo
 //---- ---- ---- ---- ----
-.dribbble-logo {
-  width: 100%;
-  height: 100%;
+
+.dribbble-logosymbol {
   position: absolute;
   top: 0;
-  animation: dribbble-logo 1s infinite;
+  width: 100%;
+  height: 100%;
+  animation: dribbble-logosymbol 1s infinite;
 }
+
 
 // header
 //---- ---- ---- ---- ----
 
 .header {
-  font-size: $s-10 * 3.5;
-  line-height: 1;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: $s-10 * 0.75;
   position: absolute;
   z-index: 3;
+  align-self: start;
+  margin-top: $s-10 * 0.75;
   width: 100%;
   height: $s-10 * 4;
-  align-self: start;
+  color: white;
+  font-size: $s-10 * 3.5;
+  line-height: 1;
   font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .hello {
-  background: linear-gradient(#fff, #e7e7e7);
   position: relative;
+  background: linear-gradient(#fff, #e7e7e7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   &::after {
-    position: absolute;
-    z-index: -1;
     content: "Hello";
+    position: absolute;
+    left: 0;
+    z-index: -1;
     width: 100%;
     height: 100%;
-    left: 0;
-    text-shadow: none;
-    //color: white;
     text-shadow: -$s-l1 -$s-l1 0px rgba(255, 57, 127, 0.5),
       $s-l1 $s-l1 0px #3153cb;
   }
 }
 
-.dribbble {
-  width: $s-10 * 4;
-  display: block;
+.dribbble-logotype {
   position: absolute;
-  right: -$s-03;
   bottom: -$s-01;
   transform: rotate(-10deg);
-
-  // height: auto;
+  display: block;
+  width: $s-10 * 4;
+  right: -$s-03;
 
   svg {
     width: 100%;
@@ -286,13 +135,17 @@ body {
     height: auto;
     overflow: visible;
   }
+
+  path {
+    fill: $pink !important;
+    box-shadow: 0 0 $s-01 0 $pink;
+    filter: url(#shadow2);
+  }
 }
 
-.dribbble svg path {
-  fill: #ff397f !important;
-  box-shadow: 0 0 $s-01 0 $pink;
-  filter: url(#shadow2);
-}
+
+// Footer
+//---- ---- ---- ---- ----
 
 .footer {
   position: absolute;
@@ -302,10 +155,10 @@ body {
 }
 
 .subtitle {
-  font-size: $s-04;
   display: block;
-  text-align: center;
+  font-size: $s-04;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.025em;
 }
@@ -317,4 +170,3 @@ body {
   font-size: $s-10 * 0.5;
   text-align: center;
 }
-

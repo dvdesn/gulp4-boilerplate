@@ -43,24 +43,30 @@
 
 
 
-
+// 0
 .kid-1 {
-  .leg-l {
+  .kid__leg {
     height: $s-10 * 4.5;
     top: $s-10 * 1.5;
   }
 
-  .leg-up {
-    transform: translate($s-03, $s-01) rotate(-30deg);
+
+  .leg-up,
+  .joint::before {
+    transform: rotate(-20deg);
   }
-  
-  .leg-down  {
-    transform: translate($s-03, $s-01) rotate(-8deg);
+
+  .leg-down,
+  .joint::after  {
+    transform: rotate(-20deg);
     height: $s-10 * 2;
   }
 
   .joint {
-    transform: translate($s-03, $s-01);
+    transform: translate(0, $s-01);
+    // transform: translate($s-03, $s-01);
+    transform: translate(-$s-03, -$s-01);
+
   }
 
   .foot {
@@ -71,69 +77,82 @@
   }
 }
 
-
+//12.5%
 .kid-2 {
-  .leg-l {
+  .kid__leg {
     top: $s-10 * 1.75;
+    height: $s-10 * 4.5;
   }
 
-  .leg-up {
-    transform: translate(-$s-03, -$s-01) rotate(5deg);
+  .leg-up,
+  .joint::before {
+    transform: rotate(5deg) scale(1);
+    height: $s-10 * 1.75;
+    // height: $s-10 * 1.5;
   }
 
-  .leg-down  {
-    transform: translate(-$s-03, -$s-01) rotate(-50deg);
+  .leg-down,
+  .joint::after  {
+    transform: rotate(-50deg) scale(1);
     height: $s-10 * 1.5;
+
   }
 
   .joint {
-    transform: translate(-$s-03, -$s-01);
+    transform: translate(-$s-03, 0) scale(1);
+    transform: translate(-$s-03, -$s-01) scale(1);
   }
 
-  .foot {
-    transform: translate(0, -$s-10 * 1.5) scale(0.65) rotate(-45deg);
+  .kid__foot {
+    transform: translate(0, -$s-20) scale(0.65) rotate(-45deg);
     border-radius: $s-04 !important;
     background: $green;
     height: $s-10;
   }
 }
 
+//25%
 .kid-3 {
-  .leg-l {
+  .kid__leg {
     top: $s-10 * .5;
   }
 
-  .leg-up {
-    transform: translate(-$s-10 * .2, -$s-04) rotate(8deg);
+  .leg-up,
+.joint::before {
+    transform:  rotate(8deg) scale(.7);
   }
 
-  .leg-down  {
-    transform:  translate(-$s-10 * .2, -$s-04) rotate(-20deg);
+  .leg-down,
+.joint::after  {
+    transform: rotate(-20deg) scale(.7);
     height: $s-10;
   }
 
   .joint {
-    transform: translate(-$s-10 * .2, -$s-04);
+    transform: translate(-$s-10 * .2, -$s-03) scale(1.3);
   }
 
-  .foot {
-    transform: translate(-$s-10 * .575, -$s-10 * 2.5) scale(0.5) rotate(-90deg);
+  .kid__foot {
+    transform: translate(-$s-10 * .575, -$s-10 * 2) scale(0.5) rotate(-90deg);
     border-radius: $s-04;
     background: $green;
   }
 }
 
+//37.5%
 .kid-4 {
-  .leg-l {
+  .kid__leg {
     top: $s-10;
   }
 
-  .leg-up {
-    transform: translate(-$s-03, -$s-04) rotate(8deg);
+  .leg-up,
+  .joint::before {
+    transform: rotate(8deg) scale(1);
   }
 
-  .leg-down  {
-    transform: translate(-$s-03, -$s-04) rotate(-20deg);
+  .leg-down,
+  .joint::after  {
+    transform: rotate(-20deg) scale(1);
     height: $s-10 * 1.25;
   }
 
@@ -141,7 +160,7 @@
     transform: translate(-$s-03, -$s-04);
   }
 
-  .foot {
+  .kid__foot {
     transform: translate(-$s-10 * .75, -$s-10) scale(0.75) rotate(22.5deg);
     border-radius: $s-04;
     height: $s-10;
@@ -150,18 +169,21 @@
   }
 }
 
+//50%
 .kid-5 {
-  .leg-l {
+  .kid__leg {
     height: $s-10 * 4.5;
     top: $s-10 * 1.5;
   }
 
-  .leg-up {
-    transform: translate(0, $s-01) rotate(-20deg);
+  .leg-up,
+  .joint::before {
+    transform: rotate(-20deg);
   }
 
-  .leg-down  {
-    transform: translate(0, $s-01) rotate(-20deg);
+  .leg-down,
+  .joint::after  {
+    transform: rotate(-30deg);
     height: $s-10 * 1.5;
   }
 
@@ -169,7 +191,7 @@
     transform: translate(0, $s-01);
   }
 
-  .foot {
+  .kid__foot {
     transform: translate(-$s-10 * .575, 0) scale(1) rotate(45deg);
     border-radius: $s-04;
     background: $light;
@@ -178,18 +200,21 @@
   }
 }
 
+//62.5%
 .kid-6 {
-  .leg-l {
+  .kid__leg {
     height: $s-10 * 4.5;
     top: $s-10 * 1.5;
   }
 
-  .leg-up {
-    transform: translate(-$s-03, $s-01) rotate(-15deg);
+  .leg-up,
+  .joint::before {
+    transform: rotate(-15deg);
   }
 
-  .leg-down  {
-    transform: translate(-$s-03, $s-01) rotate(-35deg);
+  .leg-down,
+  .joint::after  {
+    transform: rotate(-35deg);
     height: $s-10 * 2.5;
   }
 
@@ -197,7 +222,7 @@
     transform: translate(-$s-03, $s-01);
   }
 
-  .foot {
+  .kid__foot {
     transform: translate(0, 0) scale(0.75) rotate(0deg);
     border-radius: $s-04 $s-04 0 0;
     height: $s-04;
@@ -206,18 +231,21 @@
   }
 }
 
+//75%
 .kid-7 {
-  .leg-l {
+  .kid__leg {
     height: $s-10 * 6;
     top: 0;
   }
 
-  .leg-up {
-    transform: translate($s-01, $s-04) rotate(-25deg);
+  .leg-up,
+  .joint::before {
+    transform: rotate(-25deg);
   }
 
-  .leg-down  {
-    transform:  scaleY(1) translate($s-01, $s-04) rotate(-15deg);
+  .leg-down,
+  .joint::after  {
+    transform:  scaleY(1) rotate(-15deg);
     height: $s-10 * 5;
   }
 
@@ -225,7 +253,7 @@
     transform: translate($s-01, $s-04);
   }
 
-  .foot {
+  .kid__foot {
     transform: translate(0, 0) scale(0.75) rotate(0deg);
     border-radius: $s-04 $s-04 0 0;
     height: $s-04;
@@ -234,18 +262,21 @@
   }
 }
 
+//87.5%
 .kid-8 {
-  .leg-l {
+  .kid__leg {
     height: $s-10 * 6;
     top: 0;
   }
 
-  .leg-up {
-    transform: translate($s-01, $s-04) rotate(-25deg);
+  .leg-up,
+  .joint::before {
+    transform: rotate(-25deg);
   }
 
-  .leg-down  {
-    transform:  scaleY(1) translate($s-01, $s-04) rotate(-15deg);
+  .leg-down,
+  .joint::after  {
+    transform:  scaleY(1) rotate(-15deg);
     height: $s-10 * 5;
   }
 
@@ -253,7 +284,7 @@
     transform: translate($s-01, $s-04);
   }
 
-  .foot {
+  .kid__foot {
     transform: translate(0, 0) scale(0.75) rotate(0deg);
     border-radius: $s-04 $s-04 0 0;
     height: $s-04;

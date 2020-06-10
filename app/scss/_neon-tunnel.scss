@@ -14,8 +14,6 @@
     width: 100%;
     height: 100%;
     border: $s-l2 solid lighten($pink, 25%);
-    // border-right-color: #f5a3c0;
-    // border-left-color: #f5a3c0;
   }
 
   &::before {
@@ -33,7 +31,7 @@
     transform-origin: top center;
     transform: rotateX(90deg);
     box-shadow: 0 0 $s-l2 rgba($pink, 1);
-    
+
   }
 }
 
@@ -52,16 +50,16 @@
   top: 0;
   left: 0;
   box-shadow: 0 0 0 $s-l1 rgba($magento, 0.25);
-  
+
 }
 
 .neon-tunnel__hallway::before,
 .neon-tunnel__hallway::after,
-.neon-tunnel__hallway > span::before, 
+.neon-tunnel__hallway > span::before,
 .neon-tunnel__hallway > span::after {
     content: "";
     //   background: rgba($pink, .5);
-      animation: zoom-z $tunnel-speed linear infinite;  
+      animation: zoom-z $tunnel-speed linear infinite;
 }
 
 .neon-tunnel__hallway::before {
@@ -80,7 +78,6 @@
 .neon-tunnel__hallway > span::after {
     //animation-delay: -$tunnel-speed*1.25;
 }
-
 
 .neon-tunnel__back {
     background: darken($blue, 5%);
@@ -249,12 +246,12 @@
 
 
 // Alternative staff that did not make it
-//---- ---- ---- ---- ---- ----  
+//---- ---- ---- ---- ---- ----
 .hallway-shadow {
     color: red;
     top: - $tunnel-back-height;
-   
-    //box-shadow: 
+
+    //box-shadow:
         // 0 $tunnel-back-height  0 0 $blue ,
         // 0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
 
@@ -276,7 +273,7 @@
 
 @keyframes hallway-shadow {
     0%, 100% {
-        box-shadow: 
+        box-shadow:
             0 $tunnel-back-height  0 0 $blue,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
 
@@ -295,26 +292,26 @@
     }
 
     19.9% {
-        box-shadow: 
+        box-shadow:
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
-    
+
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
-    
+
             0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
-            
+
             0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
-    
+
             0 $tunnel-back-height  0 75#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25)
         ;
     }
 
     20% {
-        box-shadow: 
+        box-shadow:
             0 $tunnel-back-height  0 100#{$space-unit} transparent ,
             0 $tunnel-back-height  0 (100#{$space-unit} + $s-l1) rgba($magento, 0),
 
@@ -323,7 +320,7 @@
 
             0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
-            
+
             0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
 
@@ -333,26 +330,26 @@
     }
 
     39.9% {
-        box-shadow: 
+        box-shadow:
             0 $tunnel-back-height  0 75#{$space-unit} $blue,
             0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
-    
+
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
-    
+
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
-    
+
             0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
-            
+
             0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25)
         ;
       }
 
     40% {
-        box-shadow: 
+        box-shadow:
             0 $tunnel-back-height  0 75#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
@@ -364,36 +361,36 @@
 
             0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
-            
+
             0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25)
         ;
     }
-    
+
     59.9% {
-        box-shadow: 
+        box-shadow:
             0 $tunnel-back-height  0 50#{$space-unit} $blue ,
-            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25), 
-            
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
+
             0 $tunnel-back-height  0 75#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
-    
+
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
-    
+
             0 $tunnel-back-height  0 0 $blue ,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
-    
+
             0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25)
-        ;    
+        ;
     }
 
     60% {
-        box-shadow: 
+        box-shadow:
             0 $tunnel-back-height  0 50#{$space-unit} $blue ,
-            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25), 
-            
+            0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
+
             0 $tunnel-back-height  0 75#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
@@ -409,13 +406,13 @@
     }
 
     79.9% {
-        box-shadow: 
+        box-shadow:
             0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
 
             0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
-            
+
             0 $tunnel-back-height  0 75#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
@@ -426,15 +423,15 @@
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25)
         ;
     }
-    
+
     80% {
-        box-shadow: 
+        box-shadow:
             0 $tunnel-back-height  0 25#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (25 + $s-l1) rgba($magento, 0.25),
 
             0 $tunnel-back-height  0 50#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (50 + $s-l1) rgba($magento, 0.25),
-            
+
             0 $tunnel-back-height  0 75#{$space-unit} $blue ,
             0 $tunnel-back-height  0 (75#{$space-unit} + $s-l1) rgba($magento, 0.25),
 
@@ -447,7 +444,7 @@
     }
 
     99.9% {
-        box-shadow: 
+        box-shadow:
             0 $tunnel-back-height  0 0 $blue,
             0 $tunnel-back-height  0 $s-l1 rgba($magento, 0.25),
 

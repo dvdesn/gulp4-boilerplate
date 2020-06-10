@@ -1,0 +1,123 @@
+// Kid
+// ---- ---- ---- ---- ---- ----
+
+.kid {
+  position: relative;
+}
+
+.kid__head {
+  position: relative;
+  z-index: 10;
+  width: $s-10 * 3;
+  height: $s-10 * 3;
+  background: $pink;
+  border-radius: 100%;
+  animation: head 1s infinite;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    display: block;
+    width: $s-03;
+    height: $s-03;
+    transform: translateY(-50%);
+    background: $green;
+    border-radius: 100%;
+  }
+
+  &::before {
+    left: -$s-03;
+    animation: hip-right 1s infinite;
+  }
+
+  &::after {
+    right: -$s-03;
+    animation: hip-left 1s infinite;
+  }
+}
+
+.kid__leg {
+  position: absolute;
+  top: $size-head * 0.5;
+  left: -$s-01;
+  width: calc(50% + #{$s-01});
+  min-height: $s-10 * 4.5;
+  overflow: hidden;
+  animation: leg-l 1s infinite;
+}
+
+.kid__leg.kid__leg--r {
+  position: absolute;
+  right: -$s-01;
+  left: auto;
+  transform: scaleX(-1);
+  animation-name: leg-inverse;
+
+  .joint {
+    animation-name: leg-joint-inverse;
+  }
+
+  .joint::before {
+    animation-name: leg-up-inverse;
+  }
+
+  .joint::after {
+    animation-name: leg-down-inverse;
+  }
+
+  .kid__foot {
+    animation-name: foot-inverse;
+  }
+}
+
+.joint {
+  position: absolute;
+  top: 50%;
+  margin-top: -$s-01 * 0.5;
+  left: 50%;
+  margin-left: -($s-01 * 0.375);
+  display: block;
+  width: $s-01;
+  height: $s-01;
+  background: $magento;
+  border-radius: 100%;
+  animation: leg-joint 1s infinite;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: - $s-l1/2;
+    width: $s-l1;
+    height: $s-10 * 5;
+    background: $magento;
+  }
+
+  &::before {
+    transform-origin: bottom center;
+    bottom: 50%;
+    animation: leg-up 1s infinite;
+  }
+
+  &::after {
+    transform-origin: top center;
+    top: 50%;
+    animation: leg-down 1s infinite;
+  }
+}
+
+.kid__foot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform-origin: right bottom;
+  width: $s-10 * 1.5;
+  height: $s-10 * 0.75;
+  background: $green;
+  border-radius: $s-04 $s-04 0 0;
+  animation: foot 1s infinite;
+}

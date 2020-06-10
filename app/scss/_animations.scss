@@ -4,6 +4,7 @@
     height: $s-10 * 4.5;
     top: $s-10 * 1.5;
   }
+
   12.5% {
     top: $s-10 * 1.75;
     height: $s-10 * 4.5;
@@ -100,140 +101,141 @@
 
 @keyframes leg-up {
   0%, 100% {
-    transform: translate($s-03, $s-01) rotate(-30deg);
+    transform: rotate(-20deg);
   }
   12.5% {
-    transform: translate(-$s-03, -$s-01) rotate(5deg);
+    transform: rotate(5deg) scale(1);
+    height: $s-10 * 1.75;
   }
   25% {
-    transform: translate(-$s-10 * .2, -$s-04) rotate(8deg);
+    transform:  rotate(8deg) scale(.7);
   }
   37.5% {
-    transform: translate(-$s-03, -$s-04) rotate(8deg);
+    transform: rotate(8deg) scale(1);
   }
 
   50% {
-    transform: translate(0, $s-01) rotate(-20deg);
+    transform: rotate(-20deg);
   }
 
   62.5% {
-    transform: translate(-$s-03, $s-01) rotate(-15deg);
+    transform: rotate(-15deg);
   }
 
   75% {
-    transform: translate($s-01, $s-04) rotate(-25deg);
+    transform: rotate(-25deg);
   }
 
   87.5% {
-    transform: translate($s-01, $s-04) rotate(-25deg);
+    transform: rotate(-25deg);
   }
 }
 
 @keyframes leg-up-inverse {
   50% {
-    transform: translate($s-03, $s-01) rotate(-30deg);
+    transform: rotate(-30deg);
   }
   62.5% {
-    transform: translate(-$s-03, -$s-01) rotate(5deg);
+    transform: rotate(5deg);
   }
   75% {
-    transform: translate(-$s-10 * .2, -$s-04) rotate(8deg);
+    transform: rotate(8deg);
   }
   87.5% {
-    transform: translate(-$s-03, -$s-04) rotate(8deg);
+    transform: rotate(8deg);
   }
 
   0%, 100% {
-    transform: translate(0, $s-01) rotate(-20deg);
+    transform: rotate(-20deg);
   }
 
   12.5% {
-    transform: translate(-$s-03, $s-01) rotate(-15deg);
+    transform: rotate(-15deg);
   }
 
   25% {
-    transform: translate($s-01, $s-04) rotate(-25deg);
+    transform: rotate(-25deg);
   }
 
   37.5% {
-    transform: translate($s-01, $s-04) rotate(-25deg);
+    transform: rotate(-25deg);
   }
 }
 
 @keyframes leg-down {
   0%, 100% {
-    transform: translate($s-03, $s-01) rotate(-8deg);
+    transform: rotate(-8deg);
     height: $s-10 * 1.75;
   }
   12.5% {
-    transform: translate(-$s-03, -$s-01) rotate(-50deg);
+    transform: rotate(-50deg);
     height: $s-10 * 1.5;
   }
   25% {
-    transform:  translate(-$s-10 * .2, -$s-04) rotate(-20deg);
+    transform: rotate(-20deg);
     height: $s-10 ;
   }
   37.5% {
-    transform: translate(-$s-03, -$s-04) rotate(-20deg);
+    transform: rotate(-20deg);
     height: $s-10 * 1.25;
   }
 
   50% {
-    transform: translate(0, $s-01) rotate(-20deg);
+    transform: rotate(-20deg);
     height: $s-10 * 1.5;
   }
 
   62.5% {
-    transform: translate(-$s-03, $s-01) rotate(-35deg);
+    transform: rotate(-35deg);
     height: $s-10 * 2.25;
   }
 
   75% {
-    transform: translate($s-01, $s-04) rotate(-15deg);
+    transform: rotate(-15deg);
     height: $s-10 * 5;
   }
 
   87.5% {
-    transform: translate($s-01, $s-04) rotate(-15deg);
+    transform: rotate(-15deg);
     height: $s-10 * 5;
   }
 }
 
 @keyframes leg-down-inverse {
   50% {
-    transform: translate($s-03, $s-01) rotate(-8deg);
+    transform: rotate(-8deg);
     height: $s-10 * 1.75;
   }
   62.5% {
-    transform: translate(-$s-03, -$s-01) rotate(-50deg);
+    transform: rotate(-50deg);
     height: $s-10 * 1.5;
   }
   75% {
-    transform:  translate(-$s-10 * .2, -$s-04) rotate(-20deg);
+    transform: rotate(-20deg);
     height: $s-10 ;
   }
   87.5% {
-    transform: translate(-$s-03, -$s-04) rotate(-20deg);
+    transform: rotate(-20deg);
     height: $s-10 * 1.25;
   }
 
   0%, 100% {
-    transform: translate(0, $s-01) rotate(-20deg);
+    transform: rotate(-20deg);
     height: $s-10 * 1.5;
   }
 
   12.5% {
-    transform: translate(-$s-03, $s-01) rotate(-35deg);
+    transform: rotate(-35deg);
     height: $s-10 * 2.25;
   }
 
   25% {
-    transform: translate($s-01, $s-04) rotate(-15deg);
+    transform: rotate(-15deg);
     height: $s-10 * 5;
   }
 
   37.5% {
-    transform: translate($s-01, $s-04) rotate(-15deg);
+    transform: rotate(-15deg);
     height: $s-10 * 5;
   }
 }
@@ -426,7 +428,7 @@
 
 // Dribbble logo
 // ---- ---- ---- ---- ----
-@keyframes dribbble-logo {
+@keyframes dribbble-logosymbol {
   0%, 50%, 100% {
     transform: scaleX(1) rotate(10deg);
   }
